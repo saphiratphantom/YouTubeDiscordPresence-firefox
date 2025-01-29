@@ -1,4 +1,6 @@
 {
+    "update_url": "https://clients2.google.com/service/update2/crx",
+
     "name": "YouTubeDiscordPresence",
     "author": "Michael Ren",
     "description": "An extension used to create a detailed rich presence for YouTube videos on Discord.",
@@ -16,7 +18,7 @@
         }
     ],
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"]
     },
     "action": {
         "default_icon": "/Images/icon16.png",
@@ -36,7 +38,6 @@
     ],
     "permissions": [
         "nativeMessaging",
-        "background",
         "storage",
         "tabs"
     ],
@@ -44,5 +45,10 @@
         "16": "/Images/icon16.png",
         "48": "/Images/icon48.png",
         "128": "/Images/icon128.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "YouTubeDiscordPresence@mozilla.org"
+        }
     }
 }
